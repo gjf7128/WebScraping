@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
 
-from library.library import *
+from library import *
 
 
 class TestLibrary(unittest.TestCase):

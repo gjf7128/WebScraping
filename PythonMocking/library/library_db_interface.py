@@ -3,9 +3,8 @@ Filename: library_db_interface.py
 Description: module used for interacting with the local database
 """
 
-from library.patron import Patron
+from PythonMocking.library.patron import Patron
 from tinydb import TinyDB, Query
-import os
 
 class Library_DB:
     """Class for the local library database."""
@@ -82,5 +81,6 @@ class Library_DB:
         :param patron: the Patron python object
         :returns: a dictionary of the Patron's data
         """
+        print(patron)
         return {'fname': patron.get_fname(), 'lname': patron.get_lname(), 'age': patron.get_age(), 'memberID': patron.get_memberID(),
         'borrowed_books': patron.get_borrowed_books()}
