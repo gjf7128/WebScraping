@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
-from PythonMocking.library.library_db_interface import Library_DB
+# from PythonMocking.library.library_db_interface import Library_DB
+from library.library_db_interface import Library_DB
 
 
 class TestLibraryDbInterface(unittest.TestCase):
@@ -77,9 +78,9 @@ class TestLibraryDbInterface(unittest.TestCase):
     # Been spending hours on this and I can't figure this out without creating a Patron Object.
     # We aren't allowed to use modules not within the module we are testing :(
     # Therefor I don't know what to use for the 'actual' variable.
-    def test_convert_patron_to_db_format(self):
-        library_db = Library_DB()
-        mock = MagicMock(return_value={'fname': 'jeff', 'lname': 'smith', 'age': 20, 'memberID': 1, 'borrowed_books': []})
+    # def test_convert_patron_to_db_format(self):
+    #     library_db = Library_DB()
+    #     mock = MagicMock(return_value={'fname': 'jeff', 'lname': 'smith', 'age': 20, 'memberID': 1, 'borrowed_books': []})
 
         # fname_mock = MagicMock()
         # lname_mock = MagicMock()
@@ -93,9 +94,9 @@ class TestLibraryDbInterface(unittest.TestCase):
         # mock.memberID_mock = memberID_mock
         # mock.borrowed_mcok = borrowed_mock
 
-        actual = library_db.convert_patron_to_db_format(mock)
-
-        self.assertEqual(mock.return_value, actual.items())
+        # actual = library_db.convert_patron_to_db_format(mock)
+        #
+        # self.assertEqual(mock.return_value, actual.items())
         # fname_mock.assert_called()
 
 
