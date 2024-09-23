@@ -81,6 +81,6 @@ class Library_DB:
         :param patron: the Patron python object
         :returns: a dictionary of the Patron's data
         """
-        print(patron)
+
         return {'fname': patron.get_fname(), 'lname': patron.get_lname(), 'age': patron.get_age(), 'memberID': patron.get_memberID(),
         'borrowed_books': patron.get_borrowed_books()}
